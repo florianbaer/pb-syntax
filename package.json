@@ -1,0 +1,38 @@
+{
+    "name": "pb-syntax",
+    "displayName": "powerbuilder syntax",
+    "description": "Syntax highlighting for powerbuilder source.",
+    "version": "0.1.0",
+    "publisher": "florianbaer",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "pb",
+                "aliases": [
+                    "PowerBuilder",
+                    "powerbuilder"
+                ],
+                "extensions": [
+                    ".srd",
+                    ".sru",
+                    ".srw",
+                    ".srs"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "PowerBuilder",
+                "scopeName": "source.pb",
+                "path": "./syntaxes/powerbuilder.tmLanguage.json"
+            }
+        ]
+    }
+}

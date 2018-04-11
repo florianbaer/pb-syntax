@@ -1,0 +1,32 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "PowerBuilder",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.pb",
+				"match": "\\b(alias|and|autoinstantiate|call|case|catch|choose|close|commit|connect|constant|continue|create|cursor|declare|delete|describe|descriptor|destory|disconnect|do|dynamic|else|elseif|end|enumerated|event|execute|exit|external|false|fetch|finally|first|for|forward|from|function|global|goto|halt|if|immediate|indirect|insert|into|intrinsic|is|last|library|loop|namespace|native|next|not|of|on|open|or|parent|post|prepare|prior|private|privateread|privatewrite|procedure|protected|protectedread|protectedwrite|prototypes|public|readonly|ref|return|rollback|rpcfunc|select|selectblob|shared|static|step|subroutine|super|system|systemread|systemwrite|then|this|throw|throws|to|trigger|true|try|type|until|update|updateblob|using|variables|while|with|within|xor|_debug)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.pb",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pb",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.pb"
+}
