@@ -16,11 +16,12 @@
                 "id": "pb",
                 "aliases": [
                     "PowerBuilder",
-                    "powerbuilder"
+                    "powerbuilder",
+		    "pb"
                 ],
                 "extensions": [
-                    ".srd",
                     ".sru",
+                    ".srd",
                     ".srw",
                     ".srs"
                 ],
@@ -29,8 +30,8 @@
         ],
         "grammars": [
             {
-                "language": "PowerBuilder",
-                "scopeName": "source.pb",
+                "language": "pb",
+                "scopeName": "source.sru",
                 "path": "./syntaxes/powerbuilder.tmLanguage.json"
             }
         ]
