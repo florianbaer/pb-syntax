@@ -1,8 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "PowerBuilder",
-	"patterns": [
-		{
+	"patterns": [{
 			"include": "#keywords"
 		},
 		{
@@ -15,31 +14,56 @@
 	"repository": {
 		"keywords": {
 			"patterns": [{
-				"name": "keyword.control.pb",
-				"match": "\\b(alias|and|autoinstantiate|call|case|catch|choose|close|commit|connect|constant|continue|create|cursor|declare|delete|describe|descriptor|destory|disconnect|do|dynamic|else|elseif|end|enumerated|execute|exit|external|false|fetch|finally|first|for|forward|from|global|goto|halt|if|immediate|indirect|insert|into|intrinsic|is|last|library|loop|namespace|native|next|not|of|on|open|or|parent|post|prepare|prior|private|privateread|privatewrite|procedure|protected|protectedread|protectedwrite|prototypes|public|readonly|ref|return|rollback|rpcfunc|select|selectblob|shared|static|step|subroutine|super|system|systemread|systemwrite|then|this|throw|throws|to|trigger|true|try|type|until|update|updateblob|using|variables|while|with|within|xor|_debug|public)\\b"
-			},
-			{
-				"name": "keyword.other.pb",
-				"match": "(function|event)"
-			},
-			{
-				"name": "keyword.types.pb",
-				"match": "(any|Blob|Boolean|Byte|Char|Character|Date|DateTime|Decimal|Dec|Double|Integer|Int|Long|LongLong|Real|String|Time|UnsignedInteger|UnsignedInt|UInt|UnsignedLong|ULong)"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.pb",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
+					"name": "keyword.control.pb",
+					"match": "\\b(alias|and|autoinstantiate|call|case|catch|choose|close|commit|connect|constant|continue|create|cursor|declare|delete|describe|descriptor|destory|disconnect|do|dynamic|else|elseif|end|enumerated|execute|exit|external|false|fetch|finally|first|for|forward|from|global|goto|halt|if|immediate|indirect|insert|into|intrinsic|is|last|library|loop|namespace|native|next|not|of|on|open|or|parent|post|prepare|prior|private|privateread|privatewrite|procedure|protected|protectedread|protectedwrite|prototypes|public|readonly|ref|return|rollback|rpcfunc|select|selectblob|shared|static|step|subroutine|super|system|systemread|systemwrite|then|this|throw|throws|to|trigger|true|try|type|until|update|updateblob|using|variables|while|with|within|xor|_debug|public)\\b"
+				},
 				{
-					"name": "constant.character.escape.pb",
-					"match": "\\\\."
+					"name": "keyword.control.less",
+					"match": "\\b(?i)(function|event|subroutine)\\b"
+				},
+				{
+					"name": "keyword.types.pb",
+					"match": "\\b(any|Blob|Boolean|boolean|Byte|Char|Character|Date|DateRange|DateTime|Decimal|decimal|Dec|Double|Integer|integer|Int|Long|LongLong|long|Real|String|Time|UnsignedInteger|UnsignedInt|UInt|UnsignedLong|ULong)\\b"
+				},
+				{
+					"match": "\\n",
+					"name": "meta.ending-space"
+				}, {
+					"captures": {
+						"1": {
+							"name": "support.function"
+						},
+						"2": {
+							"name": "entity.other.attribute-name"
+						}
+					},
+					"match": "([A-Za-z0-9_.]*)[ ]*[(]"
 				}
 			]
 		},
-		"comment": {
+		"strings": {
 			"patterns": [
+                {
+                    "name": "string.quoted.double.pb",
+                    "begin": "\"",
+                    "end": "\""
+                },
+                {
+                    "name": "string.quoted.double.pb",
+                    "begin": "\\'",
+                    "end": "\\'"
+                },
+                {
+                    "name": "constant.character.escape.pb",
+                    "match": "\\\\."
+                }
+            ]
+		},
+		"comment": {
+			"patterns": [{
+					"name": "comment.line.pb",
+					"match": "//(.*?)\r?\n"
+				},
 				{
 					"name": "comment.block.documentation.pb",
 					"begin": "/\\*\\*(?!/)",
@@ -54,11 +78,9 @@
 							"name": "punctuation.definition.comment.pb"
 						}
 					},
-					"patterns": [
-						{
-							"include": "#docblock"
-						}
-					]
+					"patterns": [{
+						"include": "#docblock"
+					}]
 				},
 				{
 					"name": "comment.block.pb",
@@ -81,7 +103,7 @@
 						}
 					}
 				}
-				]
+			]
 		}
 	},
 	"scopeName": "source.sru"

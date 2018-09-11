@@ -1,39 +1,49 @@
 {
-    "name": "pb-syntax",
-    "displayName": "powerbuilder syntax",
-    "description": "Syntax highlighting for powerbuilder source.",
-    "version": "0.1.0",
-    "publisher": "florianbaer",
-    "engines": {
-        "vscode": "^1.19.0"
-    },
-    "categories": [
-        "Languages"
-    ],
-    "contributes": {
-        "languages": [
-            {
-                "id": "pb",
-                "aliases": [
-                    "PowerBuilder",
-                    "powerbuilder",
-		    "pb"
-                ],
-                "extensions": [
-                    ".sru",
-                    ".srd",
-                    ".srw",
-                    ".srs"
-                ],
-                "configuration": "./language-configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "pb",
-                "scopeName": "source.sru",
-                "path": "./syntaxes/powerbuilder.tmLanguage.json"
-            }
-        ]
-    }
+	"name": "pb-syntax",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/florianbaer/pb-syntax.git"
+	},
+	"displayName": "powerbuilder syntax",
+	"description": "Syntax highlighting for powerbuilder source.",
+	"version": "0.1.0",
+	"publisher": "florianbaer",
+	"engines": {
+		"vscode": "^1.19.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "pb",
+				"aliases": [
+					"PowerBuilder",
+					"powerbuilder",
+					"pb"
+				],
+				"extensions": [
+					".sru",
+					".srd",
+					".srm",
+					".srw",
+					".srs"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "pb",
+				"scopeName": "source.sru",
+				"path": "./syntaxes/powerbuilder.tmLanguage.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "60046c41-c2d7-4405-979b-01b637176fab",
+		"publisherId": "b04d461b-b0bf-4c37-91f7-5b47b20d263c",
+		"publisherDisplayName": "Florian Bär"
+	}
 }
