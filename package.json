@@ -28,7 +28,8 @@
 					".srd",
 					".srm",
 					".srw",
-					".srs"
+					".srs",
+					".srf"
 				],
 				"configuration": "./language-configuration.json"
 			}
