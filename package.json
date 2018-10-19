@@ -6,7 +6,7 @@
 	},
 	"displayName": "powerbuilder syntax",
 	"description": "Syntax highlighting for powerbuilder source.",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"publisher": "florianbaer",
 	"engines": {
 		"vscode": "^1.19.0"
@@ -44,7 +44,7 @@
 		]
 	},
 	"__metadata": {
-		"id": "60046c41-c2d7-4405-979b-01b637176fab",
+		"id": "a26a25ce-452a-4867-8210-6e510adf7d39",
 		"publisherId": "b04d461b-b0bf-4c37-91f7-5b47b20d263c",
 		"publisherDisplayName": "Florian Bär"
 	}
