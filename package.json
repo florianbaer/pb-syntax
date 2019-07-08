@@ -30,7 +30,10 @@
 					".srw",
 					".srs",
 					".srf",
-					".sra"
+					".sra",
+					".srp",
+					".srj",
+					".srq"
 				],
 				"configuration": "./language-configuration.json"
 			}

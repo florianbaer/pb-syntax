@@ -14,3 +14,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
  - Notes
  - Added better function highlighting with paramters.
  - Added cleanup for ignoring case on functions/subs/events as well as fixing single quotes and making functions not expand into parameters.
+
+## [0.2.1]
+### Added
+ - Added .srp (Pipeline), .srj (Project) and .srq (Query) files types to package config.
+ - Swithed regex to be case insensitive for keywords.
+ - Fixed broken strings when using ~ escape character.
