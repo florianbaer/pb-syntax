@@ -23,5 +23,11 @@
         ["(", ")"],
         ["\"", "\""],
         ["'", "'"]
-    ]
+    ],
+    "folding": {
+        "markers": {
+            "start": "^\\s*(public|private|protect)\\s(subroutine|function).+;|^\\s*event\\s.+;",
+            "end": "^\\s*end (subroutine|function|event)\\b"
+        }
+    }
 }
